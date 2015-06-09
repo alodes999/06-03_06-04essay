@@ -5,8 +5,8 @@ class CheckSplitterTest < MiniTest::Test
 
   # one of my specs should check to ensure tip returns a float.
   
-  # one of my specs should check to ensure total_cost returns a float.
+  # one of my specs should check to ensure total_cost returns and rounds a float.
   
-  # one of my specs should check to ensure split returns a float.
+  # one of my specs should check to ensure split returns and rounds a float.
   
 end
