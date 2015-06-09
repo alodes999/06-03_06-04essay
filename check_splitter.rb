@@ -1,4 +1,5 @@
 class CheckSplitter
+  attr_reader :cost, :diners, :tip
   # @cost - Integer of meal cost, entered with the cost: keyword
   # @diners - Integer of the number of diners(num_of_diners) with the num_of_diners: keyword
   # @tip - Integer (or float) of the tip value, entered with the tip: keyword
@@ -9,18 +10,18 @@ class CheckSplitter
   end
   
   #sets the tip value into a float no matter the value added  
-  def tip
+  def tip_calc
     if @tip >= 1 
-      tip = @tip / 100.0
+      @tip / 100.0
     else
-      tip = @tip
+      @tip
     end
   end
   
   #figures out the total cost
   #returns a float
   def total_cost
-    overallcost = @cost * (tip + 1)
+    overallcost = @cost * (tip_calc + 1)
     overallcost = overallcost.round(2)
   end
   
